@@ -8,7 +8,7 @@ def MAX_heapify(list,length,root):                 #使父节点大于子节点
         larger = left
     if larger!=root:
         list[larger],list[root] = list[root],list[larger]
-        MAX_heapify(list,length,larger)
+        #MAX_heapify(list,length,larger)
 
 def build_heap(list,length):                        #建堆
     for i in range((length-2)//2,-1,-1):            #//2 向下取整，从后往前
