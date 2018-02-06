@@ -1,0 +1,20 @@
+# -- coding: utf-8 --
+# author: snall  time: 2018/2/6
+
+def binary(a,target):
+    low = 0
+    high = len(a)-1
+    while low < high:
+        mid = (low+high)//2
+        mid_num = a[mid]
+        if mid_num == target:
+            return mid
+        elif mid_num > target:
+            high = mid-1
+        elif mid_num < target:
+            low = mid+1
+    return -1
+
+a = [1,2,3,4,5,10,11,25,234,2222,1111111,]
+target = 1111111111
+print('第%d个'%(binary(a,target)+1))
