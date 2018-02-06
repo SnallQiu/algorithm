@@ -4,7 +4,7 @@
 def binary(a,target):
     low = 0
     high = len(a)-1
-    while low < high:
+    while low <=high:
         mid = (low+high)//2
         mid_num = a[mid]
         if mid_num == target:
@@ -15,6 +15,6 @@ def binary(a,target):
             low = mid+1
     return -1
 
-a = [1,2,3,4,5,10,11,25,234,2222,1111111,]
-target = 1111111111
+a = [2,3,4,]
+target = 4
 print('第%d个'%(binary(a,target)+1))
