@@ -14,6 +14,11 @@ def parttion(v,left,right):
 def quicksort(v,left,right):
     if left < right:
       p = parttion(v,left,right)                          #分成两堆后，将这两堆循环这个过程，直到排序完成
+
+      #Q：编程珠玑习题，O(N)内，查找第k个小的数
+      #A：思路是下面两行递归时候加上判断
+      # if p>k-1: quciksort(v,p+1,right) if p<k-1:quciksort(v,left,p-1) ,if p==k-1:return v[k-1]
+      #不需要全部递归完排序，只需要判断k右边都比他大，k左边都比他小，就结束。
       quicksort(v,p+1,right)
       quicksort(v,left,p-1)
     return v
